@@ -1,23 +1,33 @@
 import React from 'react';
-
+import logo from '../assets/images/logo.png'
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
     return (
         <React.Fragment>
-            <h1>Hacker News Clone</h1>
+            <div className="logo">
+                <img src={logo} alt="Logo" />
+            </div>
+
             <div className="nav-link">
-                <NavLink to="/top" activeClassName="active">
-                    Top Stories
+                <NavLink to="/top"
+
+                    activeStyle={{
+                        fontWeight: "bold",
+                        color: "black",
+                        background: "#fbc91b"
+                    }}>
+                    New
           </NavLink>
-                <NavLink to="/new" activeClassName="active">
-                    Latest Stories
-          </NavLink>
-                <NavLink to="/best" activeClassName="active">
-                    Best Stories
+                <NavLink to="/new" activeStyle={{
+                    fontWeight: "bold",
+                    color: "black",
+                    background: "#fbc91b"
+                }}>
+                    Past
           </NavLink>
             </div>
-        </React.Fragment>
+        </React.Fragment >
     );
 };
 
