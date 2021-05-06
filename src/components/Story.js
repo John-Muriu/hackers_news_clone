@@ -1,5 +1,5 @@
 import React from 'react';
-import { LoremIpsum } from "react-lorem-ipsum";
+// import { LoremIpsum } from "react-lorem-ipsum";
 
 const Link = ({ url, title }) => (
     <a href={url} target="_blank" rel="noreferrer">
@@ -13,11 +13,8 @@ const Story = ({ story: { id, by, title, kids, time, url } }) => {
                 <Link url={url} title={title} />
             </div>
 
-            <div className="story-description">
-                <LoremIpsum
-                    avgWordsPerSentence={4}
-                    avgSentencesPerParagraph={4}
-                />
+            <div className="story-description"
+                data-dummytext='p-x2-w100-s12-v20'>
             </div>,
             <div className="story-info">
                 <span>
